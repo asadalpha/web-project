@@ -3,45 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create New Account</title>
-    <link rel="stylesheet" href="/style.css">
+    <title>Authentication</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-        <div class="header">
-            <div class="logo">Anywhere app.</div>
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">Join</a>
-            </nav>
-        </div>
-        <div class="container">
-           <div class="form-container">
-            <div class="startLine">START FOR FREE</div>
-            <h1>Create new account<span>.</span></h1>
-          
+    <div class="header">
+        <div class="logo">Allure</div>
+    </div>
+    <div class="container">
+        <div class="form-container">
+            <div class="startLine">allure.</div>
+            <h1>Sign Up<span>.</span></h1>
 
-            <form >
-            <div class="input-group-row">
-                <div class="input-group">
-                    <label for="first-name">First name</label>
-                    <input type="text" id="first-name" name="first-name" placeholder="prabhdeep">
+            <form>
+                <div class="input-group-row">
+                    <div class="input-group">
+                        <label for="first-name">First name</label>
+                        <input type="text" id="first-name" name="first-name">
+                    </div>
+                    <div class="input-group">
+                        <label for="last-name">Last name</label>
+                        <input type="text" id="last-name" name="last-name" >
+                    </div>
                 </div>
-                <div class="input-group">
-                    <label for="last-name">Last name</label>
-                    <input type="text" id="last-name" name="last-name" placeholder="singh">
-                </div>
-            </div>
                 <div class="input-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="prabhdeep@gmail.com">
+                    <input type="email" id="email" name="email" >
                 </div>
                 <div class="input-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="••••••••">
+                    <input type="password" id="password" name="password">
                 </div>
-
-                <p> Already A Member? <a href="#"> Log In</a></p>
+                <div class="input-group">
+                    <label>Gender</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="gender" value="male"> Male</label>
+                        <label><input type="radio" name="gender" value="female"> Female</label>
+                        <label><input type="radio" name="gender" value="other"> Other</label>
+                    </div>
+                </div>
+                <p>Already A Member? <a href="#">Log In</a></p>
                 <div class="button-group">
                     <button type="button" class="change-method">Change method</button>
                     <button type="submit" class="create-account">Create account</button>
@@ -50,6 +51,7 @@
         </div>
         <div class="image-container">
             <img src="/Untitled.svg" alt="authentication">
+        </div>
     </div>
 </body>
 </html>

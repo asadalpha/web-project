@@ -2,14 +2,14 @@
 
 :root {
     --primary-color: #d78672;
-    /* Adjusted primary color for better visibility */
+
     --primary-color-dark: #435681;
     --text-dark: #ffffff;
-    /* Text color for dark theme */
-    --text-light: #f0f0f0;
-    /* Slightly less bright for less strain on the eyes */
+
+    
+
     --extra-light: #2b2b2b;
-    /* Changed to a dark grey for consistency */
+
     --white: #ffffff;
     --max-width: 1200px;
 }
@@ -23,9 +23,9 @@
 body {
     font-family: "Poppins", sans-serif;
     background-color: #121212;
-    /* Dark background color for body */
+
     color: var(--text-dark);
-    /* Ensure text color is light */
+
 }
 
 .section-container {
@@ -44,7 +44,7 @@ body {
 a {
     text-decoration: none;
     color: var(--primary-color);
-    /* Link color for better visibility */
+
     transition: color 0.3s;
 }
 
@@ -69,7 +69,8 @@ nav {
 .nav-logo {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #fff; /* Fallback color */
+    color: #fff;
+
     background: linear-gradient(45deg, #ff6b6b, #f7c6c7, #ff6b6b);
     background-size: 200% 200%;
     -webkit-background-clip: text;
@@ -82,9 +83,11 @@ nav {
     0% {
         background-position: 0% 0%;
     }
+
     50% {
         background-position: 100% 100%;
     }
+
     100% {
         background-position: 0% 0%;
     }
@@ -102,11 +105,11 @@ nav {
     font-weight: bold;
     color: var(--text-light);
     text-decoration: none;
-    /* Ensure no underline initially */
+
     position: relative;
-    /* Needed for absolute positioning of pseudo-element */
+
     transition: color 0.7s;
-    /* Transition for color change */
+
 }
 
 .link a::after {
@@ -126,7 +129,7 @@ nav {
 
 .link a:hover::after {
     transform: scaleX(1);
-    /* Expand underline to full width on hover */
+
 }
 
 
@@ -163,7 +166,7 @@ nav {
 
 .header-content p {
     color: var(--text-light);
-    /* Use lighter text color */
+
 }
 
 .booking-container {
@@ -178,7 +181,7 @@ nav {
     padding: 3rem 2rem;
     border-radius: 2rem;
     background-color: rgba(34, 34, 34, 0.8);
-    /* Darker background for consistency */
+
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
@@ -205,7 +208,7 @@ nav {
     font-size: 1.2rem;
     font-weight: 500;
     color: var(--text-light);
-    /* Make labels lighter for readability */
+   
     pointer-events: none;
     transition: 0.3s;
 }
@@ -260,14 +263,19 @@ nav {
 .popular-card {
     overflow: hidden;
     border-radius: 1rem;
-    background-color: #1f1f1f; /* Dark card background */
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3); /* Darker shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transitions for transform and shadow */
+    background-color: #1f1f1f;
+    /* Dark card background */
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+    /* Darker shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Add transitions for transform and shadow */
 }
 
 .popular-card:hover {
-    transform: scale(1.05); /* Slightly enlarge the card */
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5); /* Darker shadow on hover for more depth */
+    transform: scale(1.05);
+    /* Slightly enlarge the card */
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+    /* Darker shadow on hover for more depth */
 }
 
 
@@ -339,12 +347,17 @@ nav {
 
 .ai-theme-container {
     padding: 2rem;
-    background-color: #1e1e1e; /* Dark background for an AI theme */
+    background-color: #1e1e1e;
+    /* Dark background for an AI theme */
     border-radius: 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-    text-align: center; /* Center align text */
-    position: relative; /* For positioning the pseudo-element */
-    overflow: hidden; /* Ensure the animation doesn’t overflow the container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* Subtle shadow for depth */
+    text-align: center;
+    /* Center align text */
+    position: relative;
+    /* For positioning the pseudo-element */
+    overflow: hidden;
+    /* Ensure the animation doesn’t overflow the container */
 }
 
 .ai-theme-container::before {
@@ -356,17 +369,22 @@ nav {
     height: 100%;
     border-radius: 1rem;
     background: linear-gradient(90deg, #4a90e2 0%, #50e3c2 50%, #4a90e2 100%);
-    background-size: 200% 100%; /* Double the width for the animation effect */
-    z-index: 0; /* Place it behind the content */
-    animation: pulse 2s infinite; /* Pulse animation */
+    background-size: 200% 100%;
+    /* Double the width for the animation effect */
+    z-index: 0;
+    /* Place it behind the content */
+    animation: pulse 2s infinite;
+    /* Pulse animation */
 }
 
 .ai-tagline {
     margin-bottom: 1rem;
     font-size: 1.2rem;
     font-weight: 400;
-    color: #ffffff; /* Highlight with primary color */
-    position: relative; /* Ensure it appears above the pulse effect */
+    color: #ffffff;
+    /* Highlight with primary color */
+    position: relative;
+    /* Ensure it appears above the pulse effect */
     z-index: 1;
 }
 
@@ -374,8 +392,10 @@ nav {
     margin-bottom: 1.5rem;
     font-size: 2rem;
     font-weight: 600;
-    color: #f5f5f5; /* Light color for contrast */
-    position: relative; /* Ensure it appears above the pulse effect */
+    color: #f5f5f5;
+    /* Light color for contrast */
+    position: relative;
+    /* Ensure it appears above the pulse effect */
     z-index: 1;
 }
 
@@ -383,27 +403,34 @@ nav {
     padding: 1rem 2rem;
     border: none;
     font-size: 1.1rem;
-    color: #ffffff; /* White text */
-    background-color: #000000; /* Primary color */
+    color: #ffffff;
+    /* White text */
+    background-color: #000000;
+    /* Primary color */
     border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
-    position: relative; /* Ensure it appears above the pulse effect */
+    position: relative;
+    /* Ensure it appears above the pulse effect */
     z-index: 1;
 }
 
 .ai-btn:hover {
-    background-color: #357abd; /* Darker shade of primary color */
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    background-color: #357abd;
+    /* Darker shade of primary color */
+    transform: scale(1.05);
+    /* Slightly enlarge on hover */
 }
 
 @keyframes pulse {
     0% {
         background-position: -100% 0%;
     }
+
     50% {
         background-position: 100% 0%;
     }
+
     100% {
         background-position: -100% 0%;
     }
@@ -411,31 +438,39 @@ nav {
 
 
 .footer {
-    background-color: #1b1b1b; /* Darker footer background */
-    padding: 2rem 1rem; /* Add padding to the footer */
+    background-color: #1b1b1b;
+    /* Darker footer background */
+    padding: 2rem 1rem;
+    /* Add padding to the footer */
 }
 
 .footer-container {
     max-width: var(--max-width);
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Adjust to 4 columns for better distribution */
-    gap: 2rem; /* Add spacing between columns */
+    grid-template-columns: repeat(4, 1fr);
+    /* Adjust to 4 columns for better distribution */
+    gap: 2rem;
+    /* Add spacing between columns */
 }
 
 .footer-col {
-    padding: 1rem; /* Add padding to each column */
+    padding: 1rem;
+    /* Add padding to each column */
 }
 
 .footer-col h3,
 .footer-col h4,
 .footer-col p {
-    color: var(--text-dark); /* Text color */
-    margin-bottom: 1rem; /* Space between elements */
+    color: var(--text-dark);
+    /* Text color */
+    margin-bottom: 1rem;
+    /* Space between elements */
 }
 
 .footer-col p:hover {
-    color: var(--primary-color); /* Hover effect for links */
+    color: var(--primary-color);
+    /* Hover effect for links */
 }
 
 .footer-bar {
@@ -445,8 +480,10 @@ nav {
     font-size: 0.9rem;
     font-weight: 500;
     color: var(--text-light);
-    text-align: center; /* Center align text */
-    border-top: 1px solid var(--extra-light); /* Add a border for separation */
+    text-align: center;
+    /* Center align text */
+    border-top: 1px solid var(--extra-light);
+    /* Add a border for separation */
 }
 
 .footer-bar::before {
@@ -457,7 +494,8 @@ nav {
     transform: translateY(-50%);
     width: 40%;
     height: 1px;
-    background-color: var(--text-light); /* Light line for visual separation */
+    background-color: var(--text-light);
+    /* Light line for visual separation */
 }
 
 
@@ -511,4 +549,3 @@ nav {
         gap: 2rem;
     }
 }
-
