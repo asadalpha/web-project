@@ -2,6 +2,7 @@
 session_start();
 session_unset();
 session_destroy();
-header("Location: login.html");
+setcookie("user", "", time() - 3600, "/"); // Clear cookie
+header("Location: login/login.php");
 exit();
 ?>

@@ -1,22 +1,29 @@
 <?php
+session_start();
 include 'db.php';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $first_name = $_POST['first-name'];
-    $last_name = $_POST['last-name'];
-    $email = $_POST['email'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $fname = $_POST['fname'];
+    $lname = $_POST['lname'];
+    $mname = $_POST['mname'];
+    $phone = $_POST['phone'];
+    $age = $_POST['age'];
+    $gender = $_POST['gender'];
+    $country = $_POST['country'];
+    $language = $_POST['language'];
+    $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
 
-    $stmt = $conn->prepare("INSERT INTO users (first_name, last_name, email, password) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param("ssss", $first_name, $last_name, $email, $password);
+    $sql = "INSERT INTO users (fname, lname, mname, phone, age, gender, country, language, password_hash)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ssssissss", $fname, $lname, $mname, $phone, $age, $gender, $country, $language, $password);
 
     if ($stmt->execute()) {
-        header("Location: login.php");
+        $_SESSION['user_id'] = $stmt->insert_id;
+        $_SESSION['fname'] = $fname;
+        header("Location: dashboard.php");
     } else {
         echo "Error: " . $stmt->error;
     }
-
-    $stmt->close();
-    $conn->close();
 }
 ?>

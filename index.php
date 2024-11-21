@@ -1,12 +1,22 @@
 <?php
 session_start();
 
+// Auto-login using cookies
 if (!isset($_SESSION['user_id']) && isset($_COOKIE['user_id'])) {
-    // Auto-login using cookies
+    // Regenerate session ID to prevent session fixation attacks
+    session_regenerate_id(true);
+
+    // Assign values from cookies to session variables
     $_SESSION['user_id'] = $_COOKIE['user_id'];
     $_SESSION['first_name'] = $_COOKIE['first_name'];
 }
 
+// Optional: Set cookies securely (for new logins)
+if (isset($_SESSION['user_id']) && !isset($_COOKIE['user_id'])) {
+    $cookie_lifetime = 86400 * 30; // 30 days
+    setcookie('user_id', $_SESSION['user_id'], time() + $cookie_lifetime, '/', '', true, true); // HttpOnly, Secure, SameSite
+    setcookie('first_name', $_SESSION['first_name'], time() + $cookie_lifetime, '/', '', true, true); // HttpOnly, Secure, SameSite
+}
 ?>
 
 <!DOCTYPE html>
@@ -28,8 +38,5 @@ if (!isset($_SESSION['user_id']) && isset($_COOKIE['user_id'])) {
             <?php endif; ?>
         </ul>
     </nav>
-
-    <!-- Page content here -->
-
 </body>
 </html>
